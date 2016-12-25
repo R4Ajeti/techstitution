@@ -1,0 +1,179 @@
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kastriot/Documents/techstitution/app/mod_main/views.py", line 31, in get_doc
+    doc = db.find_one({"_id": ObjectId(id)})
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 121, in __init__
+    self.__validate(oid)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 228, in __validate
+    _raise_invalid_id(oid)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 61, in _raise_invalid_id
+    oid, binary_type.__name__))
+InvalidId: u'favicon.ico' is not a valid ObjectId, it must be a 12-byte input of type 'str' or a 24-character hex string
+Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kastriot/Documents/techstitution/app/mod_main/views.py", line 41, in lista
+    doc = db.remove({"_id": ObjectId(id)})
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/jinja2/environment.py", line 989, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/jinja2/environment.py", line 754, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kastriot/Documents/techstitution/app/templates/result.html", line 1, in top-level template code
+    {% extends 'layout.html' %}
+  File "/home/kastriot/Documents/techstitution/app/templates/layout.html", line 16, in top-level template code
+    {% block content %}
+  File "/home/kastriot/Documents/techstitution/app/templates/result.html", line 21, in block "content"
+    <td><a href="{{ url_for('main.delete',id=d._id) }}">View</a></td>
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/helpers.py", line 312, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1641, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/helpers.py", line 305, in url_for
+    force_external=external)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/werkzeug/routing.py", line 1758, in build
+    raise BuildError(endpoint, values, method, self)
+BuildError: Could not build url for endpoint 'main.delete' with values ['id']. Did you mean 'main.lista' instead?
+Exception on /list [GET]
+Traceback (most recent call last):
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kastriot/Documents/techstitution/app/mod_main/views.py", line 41, in lista
+    doc = db.remove({"_id": ObjectId(id)})
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/jinja2/environment.py", line 989, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/jinja2/environment.py", line 754, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kastriot/Documents/techstitution/app/templates/result.html", line 1, in top-level template code
+    {% extends 'layout.html' %}
+  File "/home/kastriot/Documents/techstitution/app/templates/layout.html", line 16, in top-level template code
+    {% block content %}
+  File "/home/kastriot/Documents/techstitution/app/templates/result.html", line 21, in block "content"
+    <td><a href="{{ url_for('main.delete',id=d._id) }}">View</a></td>
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/helpers.py", line 312, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1641, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/helpers.py", line 305, in url_for
+    force_external=external)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/werkzeug/routing.py", line 1758, in build
+    raise BuildError(endpoint, values, method, self)
+BuildError: Could not build url for endpoint 'main.delete' with values ['id']. Did you mean 'main.lista' instead?
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kastriot/Documents/techstitution/app/mod_main/views.py", line 31, in get_doc
+    doc = db.find_one({"_id": ObjectId(id)})
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 121, in __init__
+    self.__validate(oid)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 228, in __validate
+    _raise_invalid_id(oid)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 61, in _raise_invalid_id
+    oid, binary_type.__name__))
+InvalidId: u'favicon.ico' is not a valid ObjectId, it must be a 12-byte input of type 'str' or a 24-character hex string
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kastriot/Documents/techstitution/app/mod_main/views.py", line 31, in get_doc
+    doc = db.find_one({"_id": ObjectId(id)})
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 121, in __init__
+    self.__validate(oid)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 228, in __validate
+    _raise_invalid_id(oid)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 61, in _raise_invalid_id
+    oid, binary_type.__name__))
+InvalidId: u'favicon.ico' is not a valid ObjectId, it must be a 12-byte input of type 'str' or a 24-character hex string
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kastriot/Documents/techstitution/app/mod_main/views.py", line 31, in get_doc
+    doc = db.find_one({"_id": ObjectId(id)})
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 121, in __init__
+    self.__validate(oid)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 228, in __validate
+    _raise_invalid_id(oid)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 61, in _raise_invalid_id
+    oid, binary_type.__name__))
+InvalidId: u'favicon.ico' is not a valid ObjectId, it must be a 12-byte input of type 'str' or a 24-character hex string
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kastriot/Documents/techstitution/app/mod_main/views.py", line 31, in get_doc
+    doc = db.find_one({"_id": ObjectId(id)})
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 121, in __init__
+    self.__validate(oid)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 228, in __validate
+    _raise_invalid_id(oid)
+  File "/home/kastriot/Documents/techstitution/venv/local/lib/python2.7/site-packages/bson/objectid.py", line 61, in _raise_invalid_id
+    oid, binary_type.__name__))
+InvalidId: u'favicon.ico' is not a valid ObjectId, it must be a 12-byte input of type 'str' or a 24-character hex string

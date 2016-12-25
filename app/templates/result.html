@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+    <div class="panel panel-default">
+              <div class="panel-heading"><h4>Result</h4>
+              </div>
+              <div class="panel-body">
+
+
+                  <table class="table">
+
+                      <tr>
+                          <th>Emri Nderrmarresit</th>
+                          <th>Adresa</th>
+                          <th>Numri i telefonit</th>
+                          <th>Email adresa</th>
+                          <th>Opsionet</th>
+                      </tr>
+
+                      {% for d in data %}
+
+                      <tr>
+                          <td>{{d['emri_nderrmarresit']}}</td>
+                          <td>{{d['adresa_nderrmarresit']}}</td>
+                          <td>{{d['telefoni_nderrmarresit']}}</td>
+                          <td>{{d['nderrmarresit_email']}}</td>
+                          <td><a href="{{ url_for('main.remove_doc',id=d._id) }}">Delete</a>/<a href="{{ url_for('main.get_doc',id=d._id) }}">View</a></td>
+
+
+                      </tr>
+                      {% endfor %}
+                  </table>
+
+
+              </div>
+
+    </div>
+{% endblock content %}
